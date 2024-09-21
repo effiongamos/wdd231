@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header, footer {
+    background-color: #1e5b80;
+    padding: 5px 0;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-work, .certificates {
+    margin-bottom: 20px;
+}
+
+.image-section {
+    text-align: center;
+}
+
+.course-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Course Filter Buttons */
+.course-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.course-btn {
+    background-color: #1e5b80;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.course-btn:hover {
+    background-color: #ffa500;
+}
+
+/* Course Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.course {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.course:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hamburger Icon for Small Screens */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+    
+    .courses-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for smaller screens */
+    }
+}
+
+/* Focus Styles */
+nav ul li a:focus {
+    background-color:  #ffa500;
+}
