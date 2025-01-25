@@ -1,0 +1,110 @@
+/* General Body Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFFFFF;
+  /* Background Color */
+  color: #000000;
+  /* Text Color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004225;  /* Primary Color */
+  padding: 10px 20px;
+}
+header .logo-container {
+  display: flex;
+  align-items: center;
+}
+header .logo {
+  height: 70px;
+  margin-right: 10px;
+}
+header .company-name {
+  color: #FFFFFF;  /* Secondary Color (white) */
+  font-family: 'roboto', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Navigation Menu Styling */
+header .menu {
+  display: flex;
+  gap: 20px;
+}
+header .menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+}
+header .menu a {
+  color: #FFFFFF;  /* Secondary Color (White) */
+  text-decoration: none;
+  font-weight: bold;
+}
+header .menu a:hover {
+  text-decoration: underline;
+}
+header .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #FFD700;
+  font-size: 30px;
+}
+/* Links */
+a {
+  color: #004225;  /* Primary Color (Deep Green) */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  background-color: #FFD700;  /* Secondary Color (Golden Yellow) */
+  color: #004225;  /* Primary Color (Deep Green) */
+  font-family: 'Roboto', sans-serif;  /* Body Text Font (Roboto) */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004225;  /* Primary Color (Deep Green) */
+  color: #FFFFFF;  /* Secondary Color (White) */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  header .menu {
+    display: none;
+  }
+
+  header .hamburger {
+    display: block;
+  }
+
+  header .menu.active {
+    display: block;
+  }
+
+  header .menu ul {
+    flex-direction: column;
+  }
+
+  header .menu a {
+    padding: 10px;
+    text-align: center;
+  }
+}
+/* End of stying the header */
