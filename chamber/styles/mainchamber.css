@@ -193,7 +193,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image covers the section */
-  filter: brightness(70%); /* Darkens the image for better text readability */
+  filter: brightness(45%); /* Darkens the image for better text readability */
 }
 
 .hero-content {
