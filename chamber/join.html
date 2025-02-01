@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chamber of Commerce Directory for businesses in Calabar">
+  <meta name="author" content="Benjamin Amos Effiong">
+  <meta property="og:title" content="Chamber Directory">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="chamber-logo.jpg">
+  <meta property="og:url" content="https://www.Tinapacalabarchamber.com">
+  <title>Join Page</title>
+  <link rel="icon" href="images/Tinapacalabar.logo.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles/mainchamber.css">
+  <script defer src="scripts/join.js"></script>
+</head>
+<body>
+  <header class="header-container">
+    <div class="logo-container">
+      <img src="images/Tinapacalabar.logo.jpeg" alt="Calabar Chamber of Commerce Logo" class="logo">
+      <span class="company-name">Chamber of Commerce</span>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
+    <nav class="menu" role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>  
+  <main class="join__main">
+    <h1>Join Our Chambers Community</h1>
+    <div class="form-dialog__container">
+        <section class="section1">
+            <form method="get" action="thankyou.html" class="form">
+                <h2>Membership Application Form</h2>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="first">First Name <span>(required)</span></label>
+                    <input type="text" id="first" name="first" required autocomplete="given-name" title="Your First Name">
+
+                    <label for="last">Last Name <span>(required)</span></label>
+                    <input type="text" id="last" name="last" required autocomplete="family-name" title="Your Last Name">
+
+                    <label for="phone">Cell Phone <span>(required)</span></label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="123-456-7891" title="Your Phone Number With Dashes">
+
+                    <label for="email">Email <span>(required)</span></label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Your Email">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label for="organization-title">Organization Title</label>
+                    <input type="text" id="organization-title" name="organization-title" autocomplete="organization-title" pattern="[A-Za-z/- ]{7,}" placeholder="Your Position">
+
+                    <label for="organization">Business / Organization's Name <span>(required)</span></label>
+                    <input type="text" id="organization" name="organization" required autocomplete="organization" placeholder="Business Name">
+
+                    <label for="membership">Membership Level</label>
+                    <select id="membership" name="membership" required>
+                        <option value="" disabled selected>-- Select a membership level --</option>
+                        <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+
+                    <label for="description">Business / Organization's Description</label>
+                    <textarea id="description" name="description" title="Describe Your Organization" placeholder="Briefly describe your organization"></textarea>
+
+                    <input type="hidden" name="timestamp" id="timestamp" value="">
+                </fieldset>
+
+                <input type="submit" value="Join Community">
+            </form>
+        </section>
+        <!-- membership level  -->
+        <section class="section2">
+          <h2>Membership Levels</h2>
+          <div>
+              <p>Non Profit Membership Level</p>
+              <button>Learn More</button>
+          </div>
+          <div>
+              <p>Bronze Membership Level</p>
+              <button>Learn More</button>
+          </div>
+          <div>
+              <p>Silver Membership Level</p>
+              <button>Learn More</button>
+          </div>
+          <div>
+              <p>Gold Membership Level</p>
+              <button>Learn More</button>
+          </div>
+      </section>
+        <!-- Gold Membership Dialog -->
+        <dialog id="goldDialog" class="membership-dialog">
+            <h3>Gold Membership Level</h3>
+            <p><strong>Cost: </strong>$100</p>
+            <p><strong>Benefits: </strong>Gain priority access to exclusive business events, premium networking opportunities, and enhanced support tailored to your growth.</p>
+            <p><strong>Training: </strong>Receive specialized training sessions designed to improve your team’s expertise and business operations.</p>
+            <p><strong>Advertising: </strong>Get featured placements on our homepage, social media, and newsletters to maximize your brand's reach.</p>
+            <button class="close">❌</button>
+        </dialog>
+
+        <!-- Silver Membership Dialog -->
+        <dialog id="silverDialog" class="membership-dialog">
+            <h3>Silver Membership Level</h3>
+            <p><strong>Cost: </strong>$50</p>
+            <p><strong>Benefits: </strong>Access valuable networking events, business resources, and standard support services.</p>
+            <p><strong>Training: </strong>Participate in group training sessions and webinars to enhance your business skills.</p>
+            <p><strong>Advertising: </strong>Get a featured listing in our business directory and occasional promotions on our platform.</p>
+            <button class="close">❌</button>
+        </dialog>
+    </div>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <p><strong>TinapaCalabar Chamber of Commerce</strong></p>
+      <p>31 Adam Duke Street, Calabar</p>
+      <p><a href="mailto:calabarchamberofcommerce@gmail.com">calabarchamberofcommerce@gmail.com</a></p>
+    </div>
+    <div class="footer-right">
+      <p>&copy; <span id="currentyear"></span></p>
+      <p>Designed and Developed by Benjamin Effiong - WDD231</p>
+      <p id="lastModified">Last Modification: <span id="modificationDate"></span></p>
+    </div>
+    <nav class="sociallinks">
+      <a href="https://www.facebook.com/">
+        <img src="images/Facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/">
+        <img src="images/instagram.svg" alt="YouTube">
+      </a>
+      <a href="https://www.instagram.com/">
+        <img src="images/youtube.svg" alt="Instagram">
+      </a>
+    </nav>
+  </footer>  
+</body>
+</html>

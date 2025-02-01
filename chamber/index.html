@@ -12,7 +12,7 @@
   <title>Home Page</title>
   <link rel="icon" href="images/Tinapacalabar.logo.jpeg" type="image/jpeg">
   <link rel="stylesheet" href="styles/mainchamber.css">
-  <script defer src="scripts/directory.js"></script>
+  <script defer src="scripts/home.js"></script>
 </head>
 <body>
     <header class="header-container">
@@ -41,40 +41,36 @@
         <a href="join.html" class="cta-button">Join the Chamber</a>
       </div>
     </section>
-
-    <!-- Current Events Section -->
-    <section id="events">
+     <!-- Current Events Section -->
+     <section id="events">
       <h2>Current Events</h2>
       <ul>
-        <li><strong>Business Expo 2025:</strong> February 10th, 2025 at the City Center.</li>
-        <li><strong>Networking Night:</strong> March 15th, 2025 at the Royal Hotel.</li>
+          <li><strong>Business Expo 2025:</strong> February 10th, 2025 at the City Center.</li>
+          <li><strong>Networking Night:</strong> March 15th, 2025 at the Royal Hotel.</li>
       </ul>
-    </section>
-
-    <!-- Weather Section -->
-    <section id="weather">
+  </section>
+  <!-- Weather Section -->
+  <section id="weather">
       <h2>Weather in Calabar</h2>
       <p>Stay updated with the current weather to plan your day.</p>
       <div id="weather-widget">
-        <!-- Placeholder for weather widget or API data -->
-        <p>Sunny, 30°C</p>
+          <!-- Weather data will be populated by JavaScript -->
+          <p id="current-weather">Loading weather...</p>
+          <div id="forecast">
+              <h3>3-Day Forecast</h3>
+              <ul id="forecast-list">
+                  <!-- Forecast data will be populated by JavaScript -->
+              </ul>
+          </div>
       </div>
-    </section>
-
-    <!-- Company Spotlights Section -->
-    <section id="spotlights">
+  </section>
+  <!-- Company Spotlights Section -->
+  <section id="spotlights">
       <h2>Company Spotlights</h2>
-      <div class="spotlight">
-        <img src="images/company1.jpg" alt="Company 1">
-        <h3>Fresh Delights Bakery</h3>
-        <p>Providing freshly baked goods to the Calabar community for over 20 years.</p>
+      <div id="spotlight-cards">
+          <!-- Spotlight cards will be populated by JavaScript -->
       </div>
-      <div class="spotlight">
-        <img src="images/company2.jpg" alt="Company 2">
-        <h3>GreenTech Solutions</h3>
-        <p>Innovating sustainable energy solutions for local businesses.</p>
-      </div>
-    </section>
+  </section>
   </main>
   <!-- Footer -->
   <footer>

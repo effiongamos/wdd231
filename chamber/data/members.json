@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Fresh Delights Bakery",
+        "logo": "images/bakertshop.jpeg",
+        "phone": "123-456-7890",
+        "address": "123 Bakery Lane, Calabar",
+        "website": "https://freshdelights.com",
+        "membership": "gold"
+    },
+    {
+        "name": "GreenTech Solutions",
+        "logo": "images/solar.jpeg",
+        "phone": "987-654-3210",
+        "address": "456 Solar St., Calabar",
+        "website": "https://greentech.com",
+        "membership": "silver"
+    },
+    {
+        "name": "Tech Innovations Ltd.",
+        "logo": "images/techlogo.jpeg",
+        "phone": "555-123-4567",
+        "address": "789 Tech Road, Calabar",
+        "website": "https://techinnovations.com",
+        "membership": "gold"
+    }
+]
