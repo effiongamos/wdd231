@@ -35,25 +35,19 @@ if (window.location.pathname.includes("thankyou.html")) {
     document.getElementById("displayTimestamp").textContent = urlParams.get("timestamp");
 }
 
-// Handle dialog open based on selected membership level
-const membershipSelect = document.getElementById("membership");
-const goldDialog = document.getElementById("goldDialog");
-const silverDialog = document.getElementById("silverDialog");
-
-membershipSelect.addEventListener('change', function () {
-    if (this.value === 'gold') {
-        goldDialog.showModal();
-    } else if (this.value === 'silver') {
-        silverDialog.showModal();
-    }
-});
-
-// Close dialog functionality
-document.querySelectorAll('.close').forEach(button => {
+// Open Dialogs
+document.querySelectorAll('.open-dialog').forEach(button => {
     button.addEventListener('click', () => {
-        button.closest('dialog').close();
+        const targetDialog = document.getElementById(button.dataset.target);
+        if (targetDialog) {
+            targetDialog.showModal(); // Open as a modal
+        }
     });
 });
 
-// Set timestamp on form load
-document.getElementById("timestamp").value = new Date().toLocaleString();
+// Close Dialogs
+document.querySelectorAll('.membership-dialog .close').forEach(button => {
+    button.addEventListener('click', () => {
+        button.closest('dialog').close(); // Close the dialog
+    });
+});

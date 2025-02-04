@@ -78,48 +78,64 @@
                 <input type="submit" value="Join Community">
             </form>
         </section>
-        <!-- membership level  -->
         <section class="section2">
           <h2>Membership Levels</h2>
           <div>
-              <p>Non Profit Membership Level</p>
-              <button>Learn More</button>
+              <p>Non-Profile Membership Level</p>
+              <button class="open-dialog" data-target="nonProfileDialog">Learn More</button>
           </div>
           <div>
               <p>Bronze Membership Level</p>
-              <button>Learn More</button>
+              <button class="open-dialog" data-target="bronzeDialog">Learn More</button>
           </div>
           <div>
               <p>Silver Membership Level</p>
-              <button>Learn More</button>
+              <button class="open-dialog" data-target="silverDialog">Learn More</button>
           </div>
           <div>
               <p>Gold Membership Level</p>
-              <button>Learn More</button>
+              <button class="open-dialog" data-target="goldDialog">Learn More</button>
           </div>
       </section>
-        <!-- Gold Membership Dialog -->
-        <dialog id="goldDialog" class="membership-dialog">
-            <h3>Gold Membership Level</h3>
-            <p><strong>Cost: </strong>$100</p>
-            <p><strong>Benefits: </strong>Gain priority access to exclusive business events, premium networking opportunities, and enhanced support tailored to your growth.</p>
-            <p><strong>Training: </strong>Receive specialized training sessions designed to improve your team’s expertise and business operations.</p>
-            <p><strong>Advertising: </strong>Get featured placements on our homepage, social media, and newsletters to maximize your brand's reach.</p>
-            <button class="close">❌</button>
-        </dialog>
-
-        <!-- Silver Membership Dialog -->
-        <dialog id="silverDialog" class="membership-dialog">
-            <h3>Silver Membership Level</h3>
-            <p><strong>Cost: </strong>$50</p>
-            <p><strong>Benefits: </strong>Access valuable networking events, business resources, and standard support services.</p>
-            <p><strong>Training: </strong>Participate in group training sessions and webinars to enhance your business skills.</p>
-            <p><strong>Advertising: </strong>Get a featured listing in our business directory and occasional promotions on our platform.</p>
-            <button class="close">❌</button>
-        </dialog>
+      
+      <!-- Membership Dialogs -->
+      <dialog id="goldDialog" class="membership-dialog">
+          <h3>Gold Membership Level</h3>
+          <p><strong>Cost: </strong>$100</p>
+          <p><strong>Benefits: </strong>Gain priority access to exclusive business events, premium networking opportunities, and enhanced support tailored to your growth.</p>
+          <p><strong>Training: </strong>Receive specialized training sessions designed to improve your team’s expertise and business operations.</p>
+          <p><strong>Advertising: </strong>Get featured placements on our homepage, social media, and newsletters to maximize your brand's reach.</p>
+          <button class="close">❌</button>
+      </dialog>
+      
+      <dialog id="silverDialog" class="membership-dialog">
+          <h3>Silver Membership Level</h3>
+          <p><strong>Cost: </strong>$50</p>
+          <p><strong>Benefits: </strong>Access valuable networking events, business resources, and standard support services.</p>
+          <p><strong>Training: </strong>Participate in group training sessions and webinars to enhance your business skills.</p>
+          <p><strong>Advertising: </strong>Get a featured listing in our business directory and occasional promotions on our platform.</p>
+          <button class="close">❌</button>
+      </dialog>
+      
+      <dialog id="bronzeDialog" class="membership-dialog">
+          <h3>Bronze Membership Level</h3>
+          <p><strong>Cost: </strong>$25</p>
+          <p><strong>Benefits: </strong>Gain access to essential business resources and entry-level networking opportunities.</p>
+          <p><strong>Training: </strong>Receive access to basic training materials and self-paced online courses.</p>
+          <p><strong>Advertising: </strong>Get listed in our business directory with limited promotional features.</p>
+          <button class="close">❌</button>
+      </dialog>
+      
+      <dialog id="nonProfileDialog" class="membership-dialog">
+          <h3>Non-Profile Membership Level</h3>
+          <p><strong>Cost: </strong>Free</p>
+          <p><strong>Benefits: </strong>Limited access to public networking events and community forums.</p>
+          <p><strong>Training: </strong>Access to selected free resources and introductory business guides.</p>
+          <p><strong>Advertising: </strong>No advertising benefits, but you can upgrade anytime for more exposure.</p>
+          <button class="close">❌</button>
+      </dialog>
     </div>
 </main>
-
   <!-- Footer -->
   <footer>
     <div class="footer-left">
