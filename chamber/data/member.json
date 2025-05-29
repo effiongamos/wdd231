@@ -1,0 +1,88 @@
+[
+  
+  {
+    "name": "Transcorp Hotel",
+    "address": "10 Murtala Mohammed Highway, Calabar, Nigeria",
+    "phone": "+234-123-456-7890",
+    "website": "https://www.transcorphotels.com",
+    "membership": "Gold",
+    "image": "transcorphotel.jpg"
+  },
+  {
+    "name": "Marian Resort",
+    "address": "25 Marian Road, Calabar, Nigeria",
+    "phone": "+234-987-654-3210",
+    "website": "https://www.marianresort.com",
+    "membership": "Silver",
+    "image": "calabarmarianresort.jpg"
+  },
+  {
+    "name": "Seaview Restaurant",
+    "address": "Beach Road, Calabar, Nigeria",
+    "phone": "+234-555-123-4567",
+    "website": "https://www.seaviewcalabar.com",
+    "membership": "Bronze",
+    "image": "seaviewresturant.jpg"
+  },
+
+  {
+    "name": "Sparkle Cyber Cafe",
+    "address": "12 MCC Road, Calabar",
+    "phone": "+234 809 876 5432",
+    "website": "https://www.sparklecyber.com",
+    "membership": "Member",
+    "image": "sparklecyber.jpg"
+  },
+  {
+    "name": "Cross River Tech Hub",
+    "address": "ICT Village, Parliamentary Extension, Calabar",
+    "phone": "+234 701 234 5678",
+    "website": "https://www.crtechhub.ng",
+    "membership": "Gold",
+    "image": "techhub.jpg"
+  },
+  {
+    "name": "Michellina Fashion House",
+    "address": "8 Ndidem Usang Iso Road, Calabar",
+    "phone": "+234 703 111 2233",
+    "website": "https://www.michellinafashion.com",
+    "membership": "Silver",
+    "image": "fashion.jpg"
+    
+  },
+  {
+    "name": "Nexus Events Centre",
+    "address": "Ekorinim Phase II, Calabar",
+    "phone": "+234 805 678 9012",
+    "website": "https://www.nexusevents.com.ng",
+    "membership": "Member",
+    "image": "eventcenter.jpg"
+    
+  },
+  {
+    "name": "Delight Supermarket",
+    "address": "45 Ndidem Usang Iso Road, Calabar",
+    "phone": "+234 813 444 5566",
+    "website": "https://www.delightsupermarket.com",
+    "membership": "Silver",
+    "image": "delightsupermarket.jpg"
+  },
+  {
+    "name": "Elite Fitness Centre",
+    "address": "Plot 10, Calabar South, Calabar",
+    "phone": "+234 802 333 4444",
+    "website": "https://www.elitefitnesscalabar.com",
+    "membership": "Gold",
+    "image": "fitnesscenter.jpg"
+    
+  },
+  {
+    "name": "Green Leaf Organic Farm",
+    "address": "Km 10, Calabar-Odukpani Road, Calabar",
+    "phone": "+234 807 222 3333",
+    "website": "https://www.greenleaforganic.com",
+     "membership": "Member",
+    "image": "greenphoto.jpg"
+   
+  }
+]
