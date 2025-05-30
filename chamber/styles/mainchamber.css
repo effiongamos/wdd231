@@ -223,62 +223,138 @@ footer a:hover {
     padding: 0.5rem 1rem;
   }
 }
-
-/* Section Styling */
-section {
-  margin-top: 2rem;
-  padding: 2rem;
-  border-radius: 8px;
-}
-
-#events,
-#weather,
-#spotlights {
-  background-color: #f4f4f4;
-}
-
-#weather {
-  background-color: #e0f7fa;
-}
-
-#events ul,
-#forecast ul {
-  list-style: none;
-  padding: 0;
-}
-
-#events li,
-#forecast li {
-  background: #fff;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-#spotlight-cards {
+/* Styling events and weather */
+.home-event-and-weather {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* no wrapping so they stay side by side */
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+#events, #weather {
+  flex: 1 1 45%;
+  max-width: 48%;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+/* Box hover effect */
+#events:hover, #weather:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+#events h2, #weather h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+/* Current weather text */
+#current-weather {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+/* Forecast list styling */
+#forecast-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
 }
 
-.spotlight-card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 30%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#forecast-list li {
+  margin-bottom: 0.8rem;
+  padding: 0.6rem 0.3rem;
+  border-radius: 6px;
+  background-color: rgba(255 255 255 / 0.7);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+#forecast-list li:hover {
+  background-color: rgba(255 255 255 / 0.9);
+  cursor: default;
+}
+/* Events list styling */
+#events ul {
+  padding-left: 1rem;
+}
+#events li {
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  border-left: 8px solid #2E8B57;
+  padding-left: 0.8rem;
+  background-color: #ffffff;
+  transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 6px;
+}
+/* Responsive for tablets and smaller */
+@media (max-width: 768px) {
+  .home-event-and-weather {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #events, #weather {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+/* spotlight Styling */
+.spotlights {
+  background-color: #f3f4f6;
+  padding: 2rem;
   text-align: center;
+}
+.spotlight-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.spotlight-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  width: 300px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+.spotlight-card:hover {
+  transform: scale(1.03);
 }
 
 .spotlight-card img {
-  width: 100%;
-  border-radius: 4px;
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.spotlight-card h3 {
+  color: #1c58ac;
+  margin: 0.5rem 0;
+}
+
+.spotlight-card p {
+  margin: 0.3rem 0;
+  color: #374151;
 }
 
 .spotlight-card a {
-  color: #004225;
-  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #2563eb;
   text-decoration: none;
 }
 
@@ -286,9 +362,24 @@ section {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  #spotlight-cards {
+.badge {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  background-color: gold;
+  color: #333;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .spotlight-container {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .spotlight-card {
+    width: 70%;
   }
 }
 
@@ -595,7 +686,7 @@ button:hover {
 }
 
 .main {
-  padding-top: 50px
+  padding-top: 70px
 }
 
 .chamber-card__container {
@@ -618,7 +709,8 @@ button:hover {
 
 .chamber__card {
   background-color: #fff;
-  border: 1px solid #004225;
+  box-shadow: 0 6px 12px rgba(38, 37, 37, 0.1);
+  border: 1.1px solid #004225;
   padding: 2rem;
   border-radius: 8px;
 }
