@@ -449,15 +449,20 @@ button:hover {
   width: 100%;
 }
 
+.join__main {
+  padding: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .join__main h1 {
-  margin: 15px 0;
+  margin: 90px 0;
   text-align: center;
   color:#000000;
   font-size: 1.5rem;
 }
 
 .form {
-  max-width: 500px;
   border-radius: 5px;
   padding: 1.2em;
   background-color: #62686461;
@@ -484,9 +489,9 @@ button:hover {
   color: rgb(158, 7, 7);
 }
 
-.form label:has(textarea),
+.form label[for="description"],
 .form label[for="membership"] {
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 .form input,
@@ -515,18 +520,15 @@ button:hover {
   -webkit-tap-highlight-color: transparent;
 }
 
-.form input[type=submit]:active {
-  color: #FFFFFF;
-  background-color:#004225;
-}
-
 .form input:focus,
 .form textarea:focus,
 .form select:focus,
 .section2 div button:focus,
 .dialog .close:focus {
-  outline: 2px solid #a86262;
+  outline: 2px solid #FBAA00;
+  outline-offset: 2px;
 }
+
 
 .section1,
 .section2 {
@@ -549,7 +551,9 @@ button:hover {
 .section2 h2,
 .section1 h2 {
   color: #FFFFFF;
-  background-color:#004225;
+  background-color: #004225;
+  margin: 0;
+  padding: .4em;
   text-align: center;
   border-radius: 5px;
   padding: .4em .8em;
@@ -559,7 +563,8 @@ button:hover {
 .section2 div {
   padding: 1em;
   text-align: center;
-  background-color: #003049;
+  background-color: #004225;
+  color: #FFFFFF;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -583,10 +588,6 @@ button:hover {
   border-radius: 5px;
 }
 
-.section2 div button:active {
-  background-color: #FBAA00;
-  color: #fff;
-}
 
 .dialog {
   width: 90%;
@@ -639,11 +640,7 @@ button:hover {
   }
 
   .form input[type=submit]:hover {
-      color: #a86262;
-  }
-
-  .form input[type=submit]:active {
-      color: #003049;
+      background-color: #2E8B57;
   }
 
   .section1,
@@ -707,6 +704,87 @@ button:hover {
       cursor: pointer;
   }
 }
+/* Styling Thankyou.html */
+/* Base layout */
+.thank-you-main {
+  max-width: 700px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2em 1em;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive typography */
+.thank-you-main h1 {
+  color: #004225;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* User info card */
+.user-info {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Section heading */
+.user-info h2 {
+  color: #004225;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Link button */
+.thank-you-main a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #004225;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover/focus states for accessibility */
+.thank-you-main a:hover,
+.thank-you-main a:focus {
+  background-color: #068b3d;
+  outline: none;
+}
+
+/* Improve mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .thank-you-main {
+    padding: 1.5em 0.75em;
+    margin: 1rem;
+  }
+
+  .thank-you-main h1 {
+    font-size: 1.4rem;
+  }
+
+  .user-info h2 {
+    font-size: 1.1rem;
+  }
+
+  .thank-you-main a {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+}
+/* end Thankyou.html styling */
 /* end Join page styling */
 
 /* Directory Styling */
