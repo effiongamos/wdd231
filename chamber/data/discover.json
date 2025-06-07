@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Marina Resort",
+    "address": "Cemetery Road, Calabar, Nigeria",
+    "description": "A scenic waterfront park with a slave history museum, boat rides, and mini zoo.",
+    "image": "images/marina.webp"
+  },
+  {
+    "name": "Obudu Mountain Resort",
+    "address": "Obanliku, Cross River State, Nigeria",
+    "description": "A popular mountain resort with cable cars, nature trails, and cool weather.",
+    "image": "images/obudu.webp"
+  },
+  {
+    "name": "Tinapa Business Resort",
+    "address": "Tinapa Free Zone, Calabar, Nigeria",
+    "description": "Shopping and business complex near a waterpark and studio facilities.",
+    "image": "images/tinapabusiness.webp"
+  },
+  {
+    "name": "Drill Ranch",
+    "address": "Calabar, Nigeria",
+    "description": "A conservation center for endangered drill monkeys and chimpanzees.",
+    "image": "images/drillranch.webp"
+  },
+  {
+    "name": "Calabar Slave Museum",
+    "address": "Marina Resort, Calabar, Nigeria",
+    "description": "A museum preserving the tragic slave trade history of the region.",
+    "image": "images/calabarslave.webp"
+  },
+  {
+    "name": "Kwa Falls",
+    "address": "Kwa River, Cross River State, Nigeria",
+    "description": "A beautiful waterfall and picnic site within the tropical rainforest.",
+    "image": "images/kwafalls.webp"
+  },
+  {
+    "name": "Calabar Carnival",
+    "address": "Calabar, Nigeria",
+    "description": "An annual festival showcasing vibrant parades, music, and cultural displays.",
+    "image": "images/calabarcarnival.webp"
+  },
+  {
+    "name": "Cultural Centre Complex",
+    "address": "Calabar Road, Calabar, Nigeria",
+    "description": "The heart of Calabar’s cultural life with theaters and festivals.",
+    "image": "images/culturalcentre.webp"
+  }
+]

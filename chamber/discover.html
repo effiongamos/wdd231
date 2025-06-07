@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Calabar: attractions and places of interest for chamber visitors and members." />
+  <meta name="author" content="Benjamin Amos Effiong">
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Tinapa Calabar Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tinapacalabarchamber.com">
+  <meta property="og:image" content="images/tinapacalabarlogo.jpg">
+  <meta property="og:description" content="Connecting businesses in Calabar and beyond.">
+  <title>Discover - Tinapacalabar Chamber of Commerce</title>
+  <link rel="icon" href="images/tinapacalabarlogo.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles/mainchamber.css">
+  <script src="scripts/visit.js" defer></script>
+  <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+  <header class="header-container">
+    <div class="logo-container">
+      <img src="images/tinapacalabarlogo.jpg" alt="TinapaCalabar Chamber of Commerce Logo" class="logo">
+      <span id="company-name">Chamber of Commerce</span>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
+    <nav class="menu" role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header> 
+  <main class="discover-grid">
+  <aside id="visit-message" class="sidebar" tabindex="0">
+      <!-- Visitor message inserted by JS -->
+  </aside>
+    
+  <section class="discovercards-grid" id="discovercards-container">
+      <!-- Cards will be populated via JS -->
+  </section>
+  </main>
+    <!-- Footer -->
+  <footer>
+  <div class="footer-left">
+    <p><strong>TinapaCalabar Chamber of Commerce</strong></p>
+    <p>31 Adam Duke Street, Calabar, Cross river</p>
+    <p>+234 803 123 4567</p>
+    <p><a href="mailto:calabarchamberofcommerce@gmail.com">Email Us</a></p>
+    <nav class="sociallinks">
+      <a href="https://www.facebook.com/">
+        <img src="images/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/">
+        <img src="images/instagram.svg" alt="YouTube">
+      </a>
+      <a href="https://www.instagram.com/">
+        <img src="images/youtube.svg" alt="Instagram">
+      </a>
+    </nav>
+  </div>
+  <div class="footer-right">
+    <p>&copy; <span id="currentyear"></span></p>
+    <p>Designed and Developed by Benjamin Effiong - WDD231</p>
+    <p id="lastModified">Last Modification: <span id="modificationDate"></span></p>
+  </div>
+</footer>
+</body>
+</html>

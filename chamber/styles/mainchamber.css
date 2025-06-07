@@ -885,3 +885,128 @@ button:hover {
     display: block;
   }
 }
+/* End Directory Styling */
+/* discover styling */
+/* Main grid container: sidebar + cards  */
+.discover-grid {
+  display: grid;
+  grid-template-areas:
+    "sidebar"
+    "cards";
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+/* Sidebar styles */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* Cards container grid with named areas for each card */
+.discovercards-grid {
+  grid-area: cards;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+/* Assign named grid areas to each card by position */
+.discovercards-grid > article:nth-child(1) { grid-area: card1; }
+.discovercards-grid > article:nth-child(2) { grid-area: card2; }
+.discovercards-grid > article:nth-child(3) { grid-area: card3; }
+.discovercards-grid > article:nth-child(4) { grid-area: card4; }
+.discovercards-grid > article:nth-child(5) { grid-area: card5; }
+.discovercards-grid > article:nth-child(6) { grid-area: card6; }
+.discovercards-grid > article:nth-child(7) { grid-area: card7; }
+.discovercards-grid > article:nth-child(8) { grid-area: card8; }
+
+/* Card styling */
+.discovercards-grid article.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 4px rgba(6, 207, 50, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+.discovercards-grid article.card:hover {
+  box-shadow: 0 6px 12px rgba(6, 207, 50, 0.2);
+}
+.discovercards-grid article.card h3 {
+  margin-top: 0;
+  color: #004225; /* Primary Color */
+}
+.discovercards-grid address {
+  font-style: normal;
+  color: #555;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.discovercards-grid p {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Images inside figure */
+.discovercards-grid figure {
+  margin: 0 0 1rem 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.discovercards-grid figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+/* Medium screens and up: sidebar + cards side by side, cards grid 2 columns */
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: 250px 1fr;
+    grid-template-areas: "sidebar cards";
+  }
+
+  .discovercards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+}
+
+/* Large screens: cards grid 4 columns */
+@media (min-width: 1025px) {
+  .discovercards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
+}
+
+/* Image hover effect only on medium and larger screens */
+@media (hover: hover) and (min-width: 641px) {
+  .discovercards-grid figure:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+  }
+}
