@@ -9,11 +9,15 @@ document.getElementById("modificationDate").textContent = new Date(document.last
 
 // Mobile menu toggle
 function toggleMenu() {
-  const menu = document.querySelector('.menu');
-  menu.classList.toggle('active');
-  document.querySelector('.hamburger').setAttribute('aria-expanded', menu.classList.contains('active'));
-}
+  const menu = document.querySelector("header .menu");
+  const hamburger = document.querySelector("header .hamburger");
 
+  menu.classList.toggle("active");
+  hamburger.classList.toggle("menu-open");
+
+  const isOpen = menu.classList.contains("active");
+  hamburger.setAttribute("aria-expanded", isOpen);
+}
 // Weather and Forecast API integration
 // Note: Replace
 const apiKey = 'f7459dc6d4d63dded70fd636da5f7727'; // Put your API key here

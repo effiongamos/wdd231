@@ -13,11 +13,15 @@ lastModifiedElement.textContent = lastModifiedDate.toLocaleString("en-US", {
 
 // scrtipting for header mobile view
 function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    const isMenuActive = menu.classList.contains('active');
-    menu.classList.toggle('active', !isMenuActive);
-    document.querySelector('.hamburger').setAttribute('aria-expanded', !isMenuActive);
-  }
+  const menu = document.querySelector("header .menu");
+  const hamburger = document.querySelector("header .hamburger");
+
+  menu.classList.toggle("active");
+  hamburger.classList.toggle("menu-open");
+
+  const isOpen = menu.classList.contains("active");
+  hamburger.setAttribute("aria-expanded", isOpen);
+}
 // end of header and footer scriptiing
 
 

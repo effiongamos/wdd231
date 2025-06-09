@@ -116,9 +116,6 @@ header .hamburger {
 }
 
 /* Hamburger Toggle Enhancement */
-header .hamburger .bar {
-  display: none;
-}
 
 header .hamburger .open {
   display: inline-block;
@@ -999,12 +996,12 @@ button:hover {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 .sidebar h2 {
-  margin-top: 0;
+  margin-top: 20px;
   color: #004225; /* Primary Color */
 }
 /* Responsive Design */
 /* Small screens: sidebar on top, cards grid 1 column */
-@media (max-width: 640px) {
+@media (min-width: 320px) and (max-width: 640px) {
   .discover-grid {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -1030,8 +1027,7 @@ button:hover {
   .discover-grid {
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
-      "sidebar"
-      "cards";
+      "sidebar cards";
   }
 
   .discovercards-grid {
