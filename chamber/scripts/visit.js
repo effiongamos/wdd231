@@ -16,5 +16,10 @@ if (lastVisit === 0) {
   }
 }
 
-messageArea.textContent = message;
+if (messageArea) {
+  messageArea.textContent = message;
+}
 localStorage.setItem('last-visit', today);
+
+
+f

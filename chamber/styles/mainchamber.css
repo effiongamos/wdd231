@@ -48,72 +48,94 @@ body {
     }
 
     /* Highlight current page for wayfinding */
-    header .menu a[aria-current="page"] {
-      text-decoration: underline;
-      font-weight: bolder;
-    }
+header .menu a[aria-current="page"] {
+  text-decoration: underline;
+  font-weight: bolder;
+}
 
-    header .menu {
-      display: flex;
-      gap: 20px;
-      margin-right: 20px;
-    }
+header .menu {
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+}
 
-    header .menu ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+header .menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-    header .menu a:hover {
-      text-decoration: underline;
-    }
+header .menu a:hover {
+  text-decoration: underline;
+}
 
-    header .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      color: #FFFFE0; /* light yellow with better contrast */
-      font-size: 30px;
-      cursor: pointer;
-      margin-right: 10px;
-      text-shadow: 1px 1px 2px #000;
-    }
+header .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #FFFFE0; /* light yellow with better contrast */
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+  text-shadow: 1px 1px 2px #000;
+}
 
-    /* Responsive Header */
-    @media (max-width: 768px) {
-      header .menu {
-        display: none;
-      }
+/* Responsive Header */
+@media (max-width: 768px) {
+  header .menu {
+    display: none;
+  }
 
-      header .hamburger {
-        display: block;
-      }
+  header .hamburger {
+    display: block;
+  }
 
-      header .menu.active {
-        display: block;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #004225;
-        padding: 10px 0;
-        z-index: 1000;
-      }
+  header .menu.active {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #004225;
+    padding: 10px 0;
+    z-index: 1000;
+  }
 
-      header .menu ul {
-        flex-direction: column;
-        gap: 10px;
-        margin: 0;
-      }
+  header .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+  }
 
-      header .menu a {
-        padding: 10px 20px;
-        display: block;
-      }
-    }
+  header .menu a {
+    padding: 10px 20px;
+    display: block;
+  }
+}
+
+/* Hamburger Toggle Enhancement */
+header .hamburger .bar {
+  display: none;
+}
+
+header .hamburger .open {
+  display: inline-block;
+}
+
+header .hamburger.menu-open .open {
+  display: none;
+}
+
+header .hamburger.menu-open .close {
+  display: inline-block;
+}
+
+header .hamburger .close {
+  display: none;
+}
+
 
     /* Extra adjustments for very narrow viewports */
     @media (max-width: 320px) {
@@ -911,7 +933,7 @@ button:hover {
 .discovercards-grid {
   grid-area: cards;
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-areas:
     "card1"
     "card2"
@@ -951,9 +973,9 @@ button:hover {
   color: #004225; /* Primary Color */
 }
 .discovercards-grid address {
-  font-style: normal;
-  color: #555;
-  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+  color: #022114;
+  font-size: 12px;
 }
 
 .discovercards-grid p {
@@ -976,11 +998,40 @@ button:hover {
   border-radius: 6px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
-/* Medium screens and up: sidebar + cards side by side, cards grid 2 columns */
-@media (min-width: 641px) {
+.sidebar h2 {
+  margin-top: 0;
+  color: #004225; /* Primary Color */
+}
+/* Responsive Design */
+/* Small screens: sidebar on top, cards grid 1 column */
+@media (max-width: 640px) {
   .discover-grid {
-    grid-template-columns: 250px 1fr;
-    grid-template-areas: "sidebar cards";
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidebar"
+      "cards";
+  }
+
+  .discovercards-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
+  }
+}
+/* Medium screens and up: sidebar + cards side by side, cards grid 2 columns */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "sidebar"
+      "cards";
   }
 
   .discovercards-grid {
