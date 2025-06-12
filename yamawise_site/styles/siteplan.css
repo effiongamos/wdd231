@@ -1,0 +1,57 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 2rem;
+  line-height: 1.6;
+}
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #004d40;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 2px solid #009688;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+h2 {
+  color: #009688;
+  margin-top: 1.5rem;
+}
+section {
+  margin-bottom: 2rem;
+}
+
+code {
+  background-color: #bfc6c6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 1rem;
+  border: 1px solid #1596b3;
+}
+
+.color-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  border: 1px solid #333;
+  vertical-align: middle;
+}
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 2px solid #009688;
+  padding-top: 1rem;
+}
