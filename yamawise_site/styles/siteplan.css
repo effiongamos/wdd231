@@ -65,7 +65,7 @@ footer {
     width: 100%;
     height: auto;
   }
-  h1, h2 {
+  h1 {
     text-align: center;
   }
 
@@ -84,7 +84,7 @@ footer {
     width: 14px;
     height: 14px;
   }
-  
+
   section {
     margin-bottom: 1.5rem;
   }
