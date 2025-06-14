@@ -1,159 +1,188 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* === General Styles === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
 }
-
-/* Header Styling */
-header, footer {
-    background-color: #1e5b80;
-    padding: 5px 0;
-    text-align: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+header {
+  background-color: #1e5b80;
+  color: white;
+  padding: 1rem;
+  position: relative;
 }
-
 .profile-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column; /* Stack image above the name */
+  align-items: center;     /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center;
+  margin: 1rem 0;
 }
-
 .profile-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
 }
-
-/* Main Section Styles */
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
 main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 1rem;
+}
+/* === Hamburger Menu === */
+.hamburger {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+.hamburger .bar {
+  display: none;
 }
 
-.course-work, .certificates {
-    margin-bottom: 20px;
+.hamburger .bar.open {
+  display: inline;
 }
 
+.nav-menu.open .hamburger .bar.open {
+  display: none;
+}
+
+.nav-menu.open .hamburger .bar.close {
+  display: inline;
+}
+/* === Navigation Menu === */
+.nav-menu {
+  margin-top: 1rem;
+}
+
+#main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+  background-color: #1e5b80;
+}
+#main-menu li a {
+  display: block;
+  padding: 0.8rem;
+  text-decoration: none;
+  color: white;
+}
+
+#main-menu li a:hover {
+  background-color: #ff9800;
+}
+
+.nav-menu.open #main-menu {
+  display: flex;
+}
+/* === Responsive Navigation === */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  #main-menu {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #main-menu li a {
+    padding: 1rem 1.5rem;
+  }
+}
+/* === Course Section === */
 .image-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+.course-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+.course-work h2 {
     text-align: center;
 }
-
-.course-image {
-    max-width: 100%;
-    height: auto;
+/* === Certificate Section === */
+.certificates {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-/* Course Filter Buttons */
+/* Center the course filter buttons */
 .course-filter {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
-.course-btn {
-    background-color: #1e5b80;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.course-btn:hover {
-    background-color: #ffa500;
-}
-
-/* Course Grid */
+/* Center the grid and limit max width for better look */
 .courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+/* === Course Filter Buttons === */
+.course-btn {
+  background-color: #1e5b80;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.course-btn:hover,
+.course-btn:focus {
+  background-color: #006699;
+}
+
+/* === Course Cards === */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
 }
 
 .course {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.course:hover {
-    transform: scale(1.05);
+/* === Footer === */
+footer {
+  background-color:  #1e5b80;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
 }
-
-/* Navigation Styling */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 30px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px;
-    display: block;
-    transition: color 0.3s ease;
-}
-
-/* Hamburger Icon for Small Screens */
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .profile-header {
-        flex-direction: column;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #000;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    nav.active ul {
-        display: flex;
-    }
-    
-    .courses-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust for smaller screens */
-    }
-}
-
-/* Focus Styles */
-nav ul li a:focus {
-    background-color:  #ffa500;
-}
-
-

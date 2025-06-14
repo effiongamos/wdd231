@@ -1,52 +1,49 @@
-// Current Year
-document.getElementById('currentyear').textContent = new Date().getFullYear();
+// Update year and last modified date
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = `Last Updated: ${document.lastModified}`;
 
-// Last Modified Date
-document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
+// Toggle menu
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-
-// JavaScript to toggle the navigation menu on small screens
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('nav-menu');
-
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+hamburger.addEventListener("click", () => {
+  const expanded = hamburger.getAttribute("aria-expanded") === "true";
+  hamburger.setAttribute("aria-expanded", !expanded);
+  navMenu.classList.toggle("open");
 });
 
-// Example course array and filtering
+// Dummy course data
 const courses = [
-    { name: "CSE 110", completed: false },
-    { name: "CSE 111", completed: true },
-    { name: "CSE 120", completed: false },
-    { name: "WDD 130", completed: true },
-    { name: "WDD 230", completed: false },
-    { name: "WDD 331", completed: true }
+  { name: "CSE 110 - Intro to programming", category: "CSE" },
+  { name: "CSE 111 - Programming with Functions", category: "CSE" },
+  { name: "CSE 210 - Programing with Class", category: "CSE" },
+  { name: "WDD 130 - Web Fundamentals", category: "WDD" },
+  { name: "WDD 131 - Dynamics Web Fundamentals", category: "WDD" },
+  { name: "WDD 231 - Web Frontend Development 1", category: "WDD" },
 ];
 
-// Function to display courses
+// Display filtered courses
 function displayCourses(filter) {
-    const courseGrid = document.querySelector('.courses-grid');
-    courseGrid.innerHTML = ''; // Clear previous courses
-    courses.forEach(course => {
-        if (filter === "All" || course.name.startsWith(filter)) {
-            const courseDiv = document.createElement('article');
-            courseDiv.className = 'course';
-            courseDiv.textContent = course.name;
-            if (course.completed) {
-                courseDiv.style.backgroundColor = '#d4edda'; // Highlight completed courses
-            }
-            courseGrid.appendChild(courseDiv);
-        }
-    });
+  const grid = document.querySelector(".courses-grid");
+  grid.innerHTML = "";
+
+  const filtered = filter === "All" ? courses : courses.filter(c => c.category === filter);
+
+  filtered.forEach(course => {
+    const div = document.createElement("div");
+    div.className = "course";
+    div.textContent = course.name;
+    grid.appendChild(div);
+  });
 }
 
-// Event listeners for filter buttons
-document.querySelectorAll('.course-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        displayCourses(button.textContent === "All" ? "All" : button.textContent);
-    });
+// Set up filter buttons
+document.querySelectorAll(".course-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.textContent.trim();
+    displayCourses(filter);
+  });
 });
 
-// Initial display
+// Initialize
 displayCourses("All");
-

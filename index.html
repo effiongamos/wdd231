@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Course Home Page for WDD 231">
-    <meta name="author" content="Benjamin Amos Effiong">
-    <title>Course Home Page</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Course Home Page for WDD 231" />
+  <meta name="author" content="Benjamin Amos Effiong" />
+  <title>Course Home Page</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="profile-header">
-            <img src="images/photo1.jpg" alt="Profile Image" class="profile-image">
+            <img src="images/photo1.jpg" alt="Benjamin Effiong's Profile Photo" class="profile-image" />
             <h1>Benjamin A. Effiong</h1>
         </div>
-        <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="chamber.html">Chamber</a></li>
-                <li><a href="https://github.com/yourusername">GitHub Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/benjamin-effiong-9173081b6">LinkedIn</a></li>
+        <!-- Hamburger Menu -->
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()">
+            <span class="bar open">&#9776;</span>
+            <span class="bar close">&times;</span>
+        </button>
+        <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+            <ul id="main-menu">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="finalproject/index.html">Final Project</a></li>
+                <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/benjamin-effiong-9173081b6" target="_blank" rel="noopener">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
         <section class="course-work">
             <h2>Course Work</h2>
-
-            <!-- Image Section -->
             <figure class="image-section">
-                <img src="images/thecapitalcityofnigeria.jpeg" alt="Abuja,Nigeria" class="course-image">
+                <img src="images/abujacapital.jpeg" alt="A view of Abuja, Nigeria" class="course-image" />
                 <figcaption class="image-caption">Abuja, Nigeria</figcaption>
             </figure>
         </section>
-
-        <!-- Course Certificate Section -->
         <section class="certificates">
             <h3>Web and Computer Programming Certificate</h3>
 
-            <!-- Filter Buttons -->
-            <div class="course-filter">
+            <div class="course-filter" role="group" aria-label="Filter courses by category">
                 <button class="course-btn">All</button>
-                <button class="course-btn">CSS</button>
+                <button class="course-btn">CSE</button>
                 <button class="course-btn">WDD</button>
                 <button class="course-btn">WD</button>
             </div>
-
-            <!-- Courses Grid -->
-            <div class="courses-grid">
-                <article class="course">CSE 110</article>
-                <article class="course">CSE 111</article>
-                <article class="course">CSE 120</article>
-                <article class="course">WDD 130</article>
-                <article class="course">WDD 230</article>
-                <article class="course">WDD 331</article>
-            </div>
+            <div class="courses-grid" aria-live="polite" aria-label="Filtered courses grid"></div>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Benjamin Amos Effiong, Nigeria</p>
+    <footer role="contentinfo">
+        <p>&copy; <span id="currentyear"></span> Design and Developed - Benjamin Effiong</p>
         <p id="lastModified"></p>
     </footer>
 </body>
