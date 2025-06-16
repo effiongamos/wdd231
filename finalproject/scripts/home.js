@@ -19,7 +19,7 @@ function toggleMenu() {
     // Switch icon
     hamburger.querySelector('.open').style.display = isExpanded ? 'inline' : 'none';
     hamburger.querySelector('.close').style.display = isExpanded ? 'none' : 'inline';
-  }
+}
 // Auto Slide Show
 const slides = document.querySelectorAll(".slide");
 let current = 0;

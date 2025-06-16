@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Budget Calculator",
+    "shortDescription": "Plan your monthly budget by tracking income and expenses.",
+    "link": "budget-calculator.html"
+  },
+  {
+    "name": "Debt Planner",
+    "shortDescription": "Create a step-by-step plan to reduce and eliminate debt.",
+    "link": "debt-planner.html"
+  },
+  {
+    "name": "Savings Goal Tracker",
+    "shortDescription": "Set savings targets and watch your progress grow.",
+    "link": "savings-tracker.html"
+  },
+  {
+    "name": "Emergency Fund Estimator",
+    "shortDescription": "Calculate how much you need for a financial safety net.",
+    "link": "emergency-fund.html"
+  },
+  {
+    "name": "Investment Portfolio Analyzer",
+    "shortDescription": "Evaluate your investment portfolio's performance and risk.",
+    "link": "portfolio-analyzer.html"
+  },
+  {
+    "name": "Expense Splitter",
+    "shortDescription": "Easily split expenses with friends or family.",
+    "link": "expense-splitter.html"
+  },
+ {
+    "name": "Income Tax Estimator",
+    "shortDescription": "Estimate your income tax based on current rates and deductions.",
+    "link": "income-tax-estimator.html"
+  },
+  {
+    "name": "Tax Calculator",
+    "shortDescription": "Estimate your tax obligations and potential refunds.",
+    "link": "tax-calculator.html"
+ },
+ {
+    "name": "Retirement Planner",
+    "shortDescription": "Plan for a secure retirement with personalized projections.",
+    "link": "retirement-planner.html"
+  },
+    {
+    "name": "Financial Goal Setter",
+    "shortDescription": "Define and track your financial goals effectively.",
+    "link": "goal-setter.html"
+    }
+]

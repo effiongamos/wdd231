@@ -145,6 +145,7 @@ body {
   background-color: var(--secondary);
 }
 
+
 /* Wayfinding (current link) */
 .menu a.active {
   background-color: var(--secondary);
@@ -519,11 +520,15 @@ button:focus-visible,
 /* === Responsive Headings and Padding === */
 @media (max-width: 600px) {
   .features h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .features .subtitle {
+    font-size: 1rem;
   }
 
   .features-grid {
-    grid-template-columns: repeat(2, 1fr); /* Always 2 columns by default */
+    grid-template-columns: repeat(1, 1fr); /* Always 2 columns by default */
   }
 
   .features .subtitle {
@@ -612,5 +617,81 @@ button:focus-visible,
   .newsletter-form {
     flex-direction: column;
     align-items: stretch;
+  }
+}
+/* End of Newsletter Section */
+/* Tools Section Styling */
+.tools-section {
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+#tools-title {
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+  font-size: 2.5rem;
+  width: fit-content;
+  color: var(--secondary);
+  margin-left: auto;
+  margin-right: auto;
+}
+.tools-intro {
+  font-size: 1.125rem;
+  color: var(--text);
+}
+/* Grid Responsive Layout */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+/* Tool Card Styling */
+.tool-card {
+  border: 1px solid var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+.tool-card:hover,
+.tool-card:focus-within {
+  transform: translateY(-4px);
+}
+.tool-card h3 {
+  margin-top: 0;
+  color: var(--secondary);
+  font-size: 1.25rem;
+}
+.tool-card p {
+  margin: 0.75rem 0;
+  color: var(--text);
+  font-size: 1rem;
+}
+.tool-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid var(--secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.tool-link:hover,
+.tool-link:focus {
+  background-color: var(--primary);
+  color: var(--white);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  #tools-title {
+    font-size: 2rem;
   }
 }

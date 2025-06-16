@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Use the YamaWise Budget Calculator to plan your income and expenses. Stay on track and make smarter financial decisions every month." />
+    <meta name="author" content="Benjamin Amos Effiong" />
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Budget Calculator | YamaWise Tools" />
+    <meta property="og:description" content="Take control of your money with the YamaWise Budget Calculator. Create monthly plans, adjust your goals, and improve your financial habits." />
+    <meta property="og:image" content="images/budget-tool-og.jpg" />
+    <meta property="og:url" content="https://www.yamawise.com/budget-calculator.html" />
+    <title>Budget Calculator | YamaWise Tools</title>
+    <link rel="icon" href="images/finance-logo3.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="styles/yamawise.css" />
+    <script defer src="scripts/tools.js"></script>
+</head>
+<body>
+    <header class="header-container">
+        <div class="left-section">
+            <div class="logo-container">
+                <img src="images/finance-logo3.jpg" alt="YamaWise logo" class="logo" loading="lazy">
+                <!-- Company Name -->
+                <span id="company-name">YamaWise</span>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="login-search">
+                <a href="login.html" class="login-link" aria-label="Login">
+                    <img src="images/user_icon.png" alt="Login icon" class="icon-img"> Login
+                </a>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="Search..." aria-label="Search">
+                <button class="search-btn" aria-label="Search">
+                    <img src="images/search_icon.svg" alt="Search icon" class="icon-img">
+                </button>
+            </div>
+        </div>
+        <!-- Hamburger Menu -->
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()">
+            <span class="bar open">&#9776;</span>
+            <span class="bar close">&times;</span>
+        </button>
+        <!-- Navigation -->
+        <nav class="menu" role="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tools.html" aria-current="page">Budget Tools</a></li>
+                <li><a href="guide.html">Tips & Guide</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" aria-labelledby="tools-title">
+        <section class="tools-section">
+            <h2 id="tools-title" tabindex="0">Helpful Financial Tools</h2>
+            <p class="tools-intro">Explore interactive calculators and guides to help you manage your money smarter.</p>
+
+            <div id="tools-list" class="tools-grid" role="list" aria-live="polite">
+              <!-- Tool cards load here -->
+            </div>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+            <p><strong>YamaWise</strong></p>
+            <p>31 Adam Duke Street, Calabar, Cross River</p>
+            <p>+234 803 123 4567</p>
+            <p><a href="mailto:yamawise@gmail.com">Email Us</a></p>
+            <nav class="sociallinks">
+                <a href="https://www.facebook.com/">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/">
+                    <img src="images/youtube.svg" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <p>&copy; <span id="currentyear"></span> Copyright | YamaWise</p>
+            <p>Designed and Developed by Benjamin Effiong - WDD231</p>
+            <p id="lastModified">Last Modification: <span id="modificationDate"></span></p>
+            <a href="https://www.loom.com/share/cd51360e25de417ba186ae60803ea5be?sid=99ce34af-6248-4405-9128-f9ce2b808a38" target="_blank">🎥 Watch Demo</a>
+        </div>
+    </footer>
+</body>
+</html>
